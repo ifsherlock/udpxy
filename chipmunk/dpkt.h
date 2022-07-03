@@ -35,7 +35,6 @@ struct rtp_header_id
     unsigned int timestamp;
 };
 
-
 /*  data stream context
  */
 struct dstream_ctx {
@@ -46,9 +45,9 @@ struct dstream_ctx {
     //rtp数据包历史记录
     struct rtp_header_id history[65536];
 
-    //待进行重复包测试的rtp包头部
+    //待进行重复包测试的rtp包头部    
     struct rtp_header_id new_rtp_package_header;
-
+    
     struct iovec*   pkt;
     int32_t         max_pkt,
                     pkt_count;
